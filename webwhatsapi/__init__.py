@@ -88,6 +88,10 @@ class WhatsAPIDriver(object):
         'QRReloader': 'div[data-ref] > span > div'
     }
 
+    _ELEMENTS_IDS = {
+        'ChatList': 'side'
+    }
+
     _CLASSES = {
         'unreadBadge': 'icon-meta',
         'messageContent': "message-text",
@@ -279,6 +283,12 @@ class WhatsAPIDriver(object):
         """Waits for the QR to go away"""
         WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, self._SELECTORS['mainPage']))
+        )
+
+    def wait_for_chatlist_visibility(self, timeout=90):
+        """Waits for chatlist visibility"""
+        WebDriverWait(self.driver, timeout).until(
+            EC.presence_of_element_located((By.ID, self._ELEMENTS_IDS['ChatList']))
         )
 
     def get_qr_plain(self):

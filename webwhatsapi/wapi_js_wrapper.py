@@ -4,6 +4,9 @@ import collections
 import numpy as np
 
 from selenium.common.exceptions import WebDriverException, JavascriptException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 from six import string_types
 from threading import Thread
 from .objects.message import factory_message
@@ -20,6 +23,11 @@ class WapiPhoneNotConnectedException(Exception):
 
 
 class WapiJsWrapper(object):
+
+    _ELEMENTS_IDS = {
+        'ChatList': 'side'
+    }
+
     """
     Wraps JS functions in window.WAPI for easier use from python
     """
@@ -58,7 +66,13 @@ class WapiJsWrapper(object):
             return self.available_functions
 
         """Sleep wait until WhatsApp loads and creates webpack objects"""
-        time.sleep(5)
+        """
+        This is not yet optimal. We assume that after the chat list is loaded, the webpack objects are created.
+        While this is true and reliable for now, we should look for a premise attached to the webpack funcionality,
+        not DOM elements.
+        """
+        self.wait_for_chatlist_visibility()
+
         try:
             script_path = os.path.dirname(os.path.abspath(__file__))
         except NameError:
@@ -75,6 +89,13 @@ class WapiJsWrapper(object):
 
     def quit(self):
         self.new_messages_observable.stop()
+
+
+    def wait_for_chatlist_visibility(self, timeout=90):
+        """Waits for chatlist visibility"""
+        WebDriverWait(self.driver, timeout).until(
+            expected_conditions.presence_of_element_located((By.ID, self._ELEMENTS_IDS['ChatList']))
+        )
 
 
 class JsArg(object):
