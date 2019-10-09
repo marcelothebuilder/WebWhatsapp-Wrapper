@@ -90,7 +90,6 @@ class WapiJsWrapper(object):
     def quit(self):
         self.new_messages_observable.stop()
 
-
     def wait_for_chatlist_visibility(self, timeout=90):
         """Waits for chatlist visibility"""
         WebDriverWait(self.driver, timeout).until(
