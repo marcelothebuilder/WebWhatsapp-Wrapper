@@ -151,7 +151,7 @@ class WhatsAPIDriver(object):
 
     def __init__(self, client="firefox", username="API", proxy=None, command_executor=None, loadstyles=False,
                  profile=None, headless=False, autoconnect=True, logger=None, extra_params=None, chrome_options=None, 
-                 executable_path=None):
+                 executable_path=None, disable_browser_updates=False):
         """Initialises the webdriver"""
 
         self.logger = logger or self.logger
@@ -172,6 +172,7 @@ class WhatsAPIDriver(object):
                 self._profile = webdriver.FirefoxProfile(self._profile_path)
             else:
                 self._profile = webdriver.FirefoxProfile()
+
             if not loadstyles:
                 # Disable CSS
                 self._profile.set_preference('permissions.default.stylesheet', 2)
@@ -180,6 +181,10 @@ class WhatsAPIDriver(object):
                 # Disable Flash
                 self._profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so',
                                              'false')
+
+            if disable_browser_updates:
+                self._profile.set_preference('app.update.enabled', False)
+
             if proxy is not None:
                 self.set_proxy(proxy)
 
