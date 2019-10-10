@@ -103,7 +103,8 @@ setup(
         'six>=1.10.0',
         'python-axolotl',
         'cryptography',
-        'python-magic'
+        'python-magic',
+        'wheel'
     ],
     setup_requires=[
         'wheel'
