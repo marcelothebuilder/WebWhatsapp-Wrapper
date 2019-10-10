@@ -105,6 +105,9 @@ setup(
         'cryptography',
         'python-magic'
     ],
+    setup_requires=[
+        'wheel'
+    ],
     extras_require={
     },
 )
