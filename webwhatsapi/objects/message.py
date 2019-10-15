@@ -60,6 +60,17 @@ class Message(WhatsappObject):
         self.timestamp = datetime.fromtimestamp(js_obj["timestamp"])
         self.chat_id = js_obj['chatId']
 
+        has_quote = "quotedMsg" in js_obj and js_obj["quotedMsg"] is not None
+
+        self.has_quote = has_quote
+
+        if self.has_quote:
+            self.has_quote = True
+            self.quoted_type = js_obj["quotedMsg"]["type"]
+            self.quoted_content = js_obj["quotedMsg"]["body"]
+            self.quoted_safe_content = safe_str(self.quoted_content[0:25]) + '...'
+            self.quoted_participant = js_obj["quotedParticipant"]
+
         if js_obj["content"]:
             self.content = js_obj["content"]
             self.safe_content = safe_str(self.content[0:25]) + '...'
