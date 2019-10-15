@@ -69,6 +69,12 @@ if (!window.Store) {
         }
 
         webpackJsonp([], { 'parasite': (x, y, z) => getStore(z) }, ['parasite']);
+
+        // taken from https://github.com/mukulhase/WebWhatsapp-Wrapper/pull/547
+        // TODO: write in proper "autodiscovery mode"
+        window.Store.WapQuery = {};
+        webpackJsonp([], { "dgfhfgbdeb": (x, y, z) => window.Store.WapQuery = z('"dgfhfgbdeb"') }, "dgfhfgbdeb");
+        window.Store.WapQuery = window.Store.WapQuery.default;
     })();
 }
 
@@ -712,6 +718,66 @@ window.WAPI.ReplyMessage = function (idMessage, message, done) {
         return false;
     }
 };
+
+// taken from https://github.com/mukulhase/WebWhatsapp-Wrapper/issues/594#issuecomment-483171016
+window.WAPI.ReplyMessageWithQuote = function (idMessage, message, done) {
+    console.log('window.WAPI.ReplyMessageWithQuote', idMessage, message);
+    var messageObject = Store.Msg.get(idMessage);
+    if (messageObject === undefined) {
+        if (done !== undefined) done(false);
+        return false;
+    }
+    messageObject = messageObject.valueOf();
+    const chat = Store.Chat.get(messageObject.chat.id);
+    console.log('chat', chat)
+    if (chat !== undefined) {
+        if (done !== undefined) {
+            let params = {
+                quotedMsg: messageObject
+            };
+            chat.sendMessage(message, params).then(function () {
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                var trials = 0;
+                function check() {
+                    let msg = chat.getLastReceivedMsg(),
+                        isSameText = function (a, b) {
+                            return escape((a + '').trim()) == escape((b + '').trim())
+                        };
+                    if (!(!msg.senderObj.isMe || !isSameText(msg.body, message))) {
+                        done(WAPI._serializeMessageObj(msg));
+                        return true;
+                    }
+                    // Failover, loop through from msgs
+                    for (let i = chat.msgs.models.length - 1; i >= 0; i--) {
+                        msg = chat.msgs.models[i];
+                        if (!(!msg.senderObj.isMe || !isSameText(msg.body, message))) {
+                            done(WAPI._serializeMessageObj(msg));
+                            return true;
+                        }
+                    }
+                    trials += 1;
+                    console.log(trials);
+                    if (trials > 30) {
+                        done(true);
+                        return;
+                    }
+                    sleep(500).then(check);
+                }
+                check();
+            });
+            return true;
+        } else {
+            chat.sendMessage(message, null, messageObject);
+            return true;
+        }
+    } else {
+        if (done !== undefined) done(false);
+        return false;
+    }
+};
+
 
 window.WAPI.sendMessageToID = function (id, message, done) {
     try {

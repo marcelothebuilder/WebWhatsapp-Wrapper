@@ -565,7 +565,7 @@ class WhatsAPIDriver(object):
         return result
 
     def chat_reply_message(self, message_id, message):
-        result = self.wapi_functions.ReplyMessage(message_id, message)
+        result = self.wapi_functions.ReplyMessageWithQuote(message_id, message)
 
         if not isinstance(result, bool):
             return factory_message(result, self)
