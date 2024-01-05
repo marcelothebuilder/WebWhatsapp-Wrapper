@@ -1,11 +1,12 @@
 repo_name: marcelothebuilder/WebWhatsapp-Wrapper
 report_id: 2a0844d4846ae34d96b2838b032aa6fa
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T20:03:48+00:00'
+timestamp: '2024-01-05T08:52:27+00:00'
 requested_by: marcelothebuilder
 provider: github
 branch: master
-detected_tools_count: 24
+detected_tools_count: 25
 tools:
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper
   detection_source: Repo Metadata
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper
   detection_source: Repo Metadata
 - name: Docker
   description: Enterprise Container Platform for High-Velocity Innovation.
@@ -36,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Virtual Machine Platforms & Containers
   image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -45,6 +49,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -54,6 +59,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/setup.py
   detection_source: setup.py
   last_updated_by: Mukul Hase
   last_updated_on: 2017-09-15 11:45:51.000000000 Z
@@ -66,6 +72,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/.travis.yml
   detection_source: ".travis.yml"
   last_updated_by: Mukul Hase
   last_updated_on: 2017-12-22 04:04:17.000000000 Z
@@ -77,6 +84,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/4838/default_c37162891c64eca7fafe782d9c191e409aae1e93.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/requirements-test.txt
   detection_source: requirements-test.txt
   last_updated_by: alfred82santa
   last_updated_on: 2018-02-18 10:11:49.000000000 Z
@@ -89,7 +97,7 @@ tools:
   category: Application Hosting
   sub_category: Web Server Interface
   image_url: https://img.stackshare.io/service/1838/uwsgi.png
-  detection_source_url: sample/flask/Pipfile.lock
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/sample/flask/Pipfile.lock
   detection_source: sample/flask/Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-19 13:13:19.000000000 Z
@@ -103,8 +111,8 @@ tools:
   category: Libraries
   sub_category: Data Science Tools
   image_url: https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png
-  detection_source_url: Pipfile.lock
-  detection_source: sample/flask/Pipfile
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Anibal Carvalho
   last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: Shell
@@ -116,6 +124,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper
   detection_source: Repo Metadata
 - name: Sphinx
   description: Open source full text search server, designed from the ground up with
@@ -126,6 +135,7 @@ tools:
   category: Application Utilities
   sub_category: Search Engines
   image_url: https://img.stackshare.io/service/1598/TtqoAo1V.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/requirements-docs.txt
   detection_source: requirements-docs.txt
   last_updated_by: Mukul Hase
   last_updated_on: 2018-05-18 10:56:31.000000000 Z
@@ -135,24 +145,26 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/4836/pUBY5pVj_normal.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/requirements-test.txt
   detection_source: requirements-test.txt
   last_updated_by: alfred82santa
   last_updated_on: 2018-02-18 10:11:49.000000000 Z
 - name: Jinja2
   description: A very fast and expressive template engine
-  package_url: https://pypi.org/Jinja2
+  package_url: https://pypi.org/project/Jinja2
   license: BSD-3-Clause
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19836/default_85689b353a3a9409328e253ea28d859d29151e0c.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/sample/flask/Pipfile
   detection_source: sample/flask/Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-19 13:13:19.000000000 Z
 - name: aiohttp
   description: Async http client/server framework
-  package_url: https://pypi.org/aiohttp
+  package_url: https://pypi.org/project/aiohttp
   version: 3.4.4
   license: Apache-2.0
   open_source: true
@@ -160,11 +172,35 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19852/default_d748224707283d9d8a73c2323730c87bda6b313a.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Julian
   last_updated_on: 2018-04-01 23:52:51.000000000 Z
   vulnerabilities:
+  - name: aiohttp's ClientSession is vulnerable to CRLF injection via version
+    cve_id: CVE-2023-49081
+    cve_url: https://github.com/advisories/GHSA-q3qx-c6g2-7pw2
+    detected_date: Nov 28
+    severity: high
+    first_patched: 3.9.0
+  - name: aiohttp has vulnerable dependency that is vulnerable to request smuggling
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-pjjw-qhg8-p2p9
+    detected_date: Nov 29
+    severity: moderate
+    first_patched: 3.8.6
+  - name: aiohttp's ClientSession is vulnerable to CRLF injection via method
+    cve_id: CVE-2023-49082
+    cve_url: https://github.com/advisories/GHSA-qvrw-v9rv-5rjx
+    detected_date: Nov 28
+    severity: moderate
+    first_patched: 3.9.0
+  - name: AIOHTTP has problems in HTTP parser (the python one, not llhttp)
+    cve_id: CVE-2023-47627
+    cve_url: https://github.com/advisories/GHSA-gfw2-4jvh-wgfg
+    detected_date: Nov 15
+    severity: moderate
+    first_patched: 3.8.6
   - name: aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp
       HTTP request parser
     cve_id: CVE-2023-37276
@@ -184,10 +220,17 @@ tools:
     detected_date: Aug 22
     severity: low
     first_patched: 3.7.4
+  - name: Aiohttp has inconsistent interpretation of `Content-Length` vs. `Transfer-Encoding`
+      differing in C and Python fallbacks
+    cve_id: CVE-2023-47641
+    cve_url: https://github.com/advisories/GHSA-xx9p-xxvh-7g8j
+    detected_date: Nov 15
+    severity: low
+    first_patched: 3.8.0
 - name: autopep8
   description: A tool that automatically formats Python code to conform to the PEP
     8 style guide
-  package_url: https://pypi.org/autopep8
+  package_url: https://pypi.org/project/autopep8
   version: '1.4'
   license: MIT
   open_source: true
@@ -195,13 +238,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20353/default_4fff53bc8c15a9ea5decdac96fdba9b8874b07ce.png
-  detection_source_url: Pipfile.lock
-  detection_source: requirements-test.txt
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Anibal Carvalho
   last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: coverage
   description: Code coverage measurement for Python
-  package_url: https://pypi.org/coverage
+  package_url: https://pypi.org/project/coverage
   version: 4.5.1
   license: Apache-2.0
   open_source: true
@@ -209,14 +252,14 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19904/default_1d0eb6da6bdd342bb15f73d8f1721516ebacd1dc.png
-  detection_source_url: Pipfile.lock
-  detection_source: requirements-test.txt
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Anibal Carvalho
   last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: cryptography
   description: Cryptography is a package which provides cryptographic recipes and
     primitives to Python developers
-  package_url: https://pypi.org/cryptography
+  package_url: https://pypi.org/project/cryptography
   version: 2.3.1
   license: BSD-3-Clause,Apache-2.0
   open_source: true
@@ -224,8 +267,8 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19850/default_db2ab2702f70e20c272f6ce65251108fb2b8f1ea.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Julian
   last_updated_on: 2018-04-02 00:54:26.000000000 Z
   vulnerabilities:
@@ -248,21 +291,35 @@ tools:
     detected_date: Feb 8
     severity: moderate
     first_patched: 39.0.1
-  - name: Vulnerable OpenSSL included in cryptography wheels
-    cve_id: 
-    cve_url: https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
-    detected_date: Jun 3
-    severity: low
-    first_patched: 41.0.0
   - name: pyca/cryptography's wheels include vulnerable OpenSSL
     cve_id: 
     cve_url: https://github.com/advisories/GHSA-jm77-qphf-c4w8
     detected_date: Aug 2
     severity: low
     first_patched: 41.0.3
+  - name: Vulnerable OpenSSL included in cryptography wheels
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    detected_date: Jun 3
+    severity: low
+    first_patched: 41.0.0
+- name: pep8
+  description: Python style guide checker
+  package_url: https://pypi.org/project/pep8
+  version: 1.7.1
+  license: Saxpath
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20602/default_430d28419e5efde85a59e0f374f43c9e7b7ed15b.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
+  last_updated_by: Anibal Carvalho
+  last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: python-dateutil
   description: Extensions to the standard Python datetime module
-  package_url: https://pypi.org/python-dateutil
+  package_url: https://pypi.org/project/python-dateutil
   version: 2.7.3
   license: NRL
   open_source: true
@@ -270,13 +327,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19833/default_58dbe7b4d7ec447b62773209af0f9a31bbabf5bd.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-15 06:54:42.000000000 Z
 - name: python-magic
   description: File type identification using libmagic
-  package_url: https://pypi.org/python-magic
+  package_url: https://pypi.org/project/python-magic
   version: 0.4.15
   license: MIT
   open_source: true
@@ -284,13 +341,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20245/default_79c7a01488eebdf30ca22b7316d9f77bbe7fad8b.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-15 06:54:42.000000000 Z
 - name: requests
   description: Python HTTP for Humans
-  package_url: https://pypi.org/requests
+  package_url: https://pypi.org/project/requests
   version: 2.19.1
   license: Apache-2.0
   open_source: true
@@ -298,7 +355,7 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19826/default_d7c684bf2673f008a9f02ac93901229297a22d7e.png
-  detection_source_url: sample/flask/Pipfile.lock
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/sample/flask/Pipfile.lock
   detection_source: sample/flask/Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-19 13:13:19.000000000 Z
@@ -317,7 +374,7 @@ tools:
     first_patched: 2.31.0
 - name: selenium
   description: Python bindings for Selenium
-  package_url: https://pypi.org/selenium
+  package_url: https://pypi.org/project/selenium
   version: 3.14.0
   license: Apache-2.0
   open_source: true
@@ -325,13 +382,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19869/default_d05f6f09935776629f62e8aed365805502c14921.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Anibal Carvalho
   last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: six
   description: Python 2 and 3 compatibility utilities
-  package_url: https://pypi.org/six
+  package_url: https://pypi.org/project/six
   version: 1.11.0
   license: MIT
   open_source: true
@@ -339,13 +396,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19827/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
-  detection_source_url: Pipfile.lock
-  detection_source: setup.py
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Anibal Carvalho
   last_updated_on: 2018-03-12 20:23:49.000000000 Z
 - name: typing
   description: Type Hints for Python
-  package_url: https://pypi.org/typing
+  package_url: https://pypi.org/project/typing
   version: 3.6.6
   license: Python-2.0
   open_source: true
@@ -353,19 +410,20 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19868/default_bd86f80ade48cfe191d5781a2efa0e66fa22163a.png
-  detection_source_url: Pipfile.lock
-  detection_source: sample/flask/Pipfile
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/Pipfile.lock
+  detection_source: Pipfile
   last_updated_by: Nishant Bhatia
   last_updated_on: 2018-09-15 06:54:42.000000000 Z
 - name: wheel
   description: A built-package format for Python
-  package_url: https://pypi.org/wheel
+  package_url: https://pypi.org/project/wheel
   license: MIT
   open_source: true
   hosted_saas: false
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19889/default_7182952cb92ae36151a754e2592ac68e6e6340df.png
+  detection_source_url: https://github.com/marcelothebuilder/WebWhatsapp-Wrapper/blob/master/setup.py
   detection_source: setup.py
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2019-10-10 22:46:46.000000000 Z
